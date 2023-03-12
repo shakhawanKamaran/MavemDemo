@@ -25,7 +25,3 @@ jobs:
 
     - name: ${{github.action}}
       run: mvn test
-      
-  test:
-    runs-on: ubuntu-latest
-
