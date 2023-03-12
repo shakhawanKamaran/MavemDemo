@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: ${{github.action_repository}}
+    - name: ${{github.actor}}
       uses: actions/setup-java@v1
       with: 
        java-version: 1.8
