@@ -29,8 +29,7 @@ jobs:
   windows_job:
     runs-on: windows-latest
     steps:
-      - run: echo 'Hi ${{ env.mascot }}'  # Hi Mona
-      - run: echo 'Hi ${{ env.mascot }}'  # Hi Octocat
+      - run: echo secrets
         
   linux_job:
     runs-on: ubuntu-latest
