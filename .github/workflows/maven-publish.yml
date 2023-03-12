@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Set up JDK 1.8
+    - name: ${{github.action}}
       uses: actions/setup-java@v1
       with: 
        java-version: 1.8
@@ -23,5 +23,5 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - name: ${{github.action}}
+    - name: Test With Maven
       run: mvn test
