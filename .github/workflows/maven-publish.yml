@@ -25,5 +25,7 @@ jobs:
 
     - name: Test with Maven
       run: mvn test
-           echo "Test"
+      
+    - name: run linux command
+      run: echo test
       
