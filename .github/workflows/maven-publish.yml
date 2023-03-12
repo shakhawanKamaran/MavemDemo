@@ -27,8 +27,8 @@ jobs:
       run: mvn test
       
   test:
-    needs: [build]
     runs-on: ubuntu-latest
+    needs: [build]
     steps:
       - name: Dump GitHub context
         id: github_context_step
