@@ -23,7 +23,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - name: Test with Maven
+    - name: ${{github.action}}
       run: mvn test
       
   test:
