@@ -27,5 +27,5 @@ jobs:
       run: mvn test
       
     - name: run linux command
-      run: echo test
+      run: github.event_name
       
