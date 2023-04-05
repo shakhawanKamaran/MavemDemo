@@ -10,22 +10,16 @@ on:
 
 jobs:
   build:
-    if: ${{ github.ref == 'refs/heads/master' }}
-    runs-on: ubuntu-latest
-
+    runs-on: ubuntu-lates
+    
     steps:
     - uses: actions/checkout@v1
     - name: ${{github.actor}}
-      uses: actions/setup-java@v1
-      with: 
-       java-version: 1.8
+      run: |
+       echo ${{secrets.TESTSEC}}
+       echo test
 
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
-
-    - name: Test With Maven
-      run: mvn test
-      
+    
   windows_job:
     runs-on: windows-latest
     steps:
