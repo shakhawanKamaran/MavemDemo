@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: ${{github.actor}}
       run: |
-       echo ${{env.TESTENV}}
+       echo ${{vars.TESTENV}}
        echo test env
 
     
