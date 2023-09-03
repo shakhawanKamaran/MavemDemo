@@ -21,7 +21,8 @@ jobs:
 
     - name: generate summary
       run: |
-       cat /etc/os-release >> $GITHUB_STEP_SUMMARY
+       SUMMARY=$'# Testing Job Summary\n## Second Level Heading\nHello GitHub'
+       echo "$SUMMARY" >> $GITHUB_STEP_SUMMARY
       
 
 
