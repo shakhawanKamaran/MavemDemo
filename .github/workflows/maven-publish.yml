@@ -19,9 +19,27 @@ jobs:
        echo ${{vars.TESTENV}}
        echo test env
     - run: |
-       echo "<h1>test</h1>" >> $GITHUB_STEP_SUMMARY
-        echo "<h2>test</h2>" >> $GITHUB_STEP_SUMMARY
-     
+       echo "<tr><td>PING_INLINE,61716.97,64016.39,-2299.42</td></tr>
+             <tr><td>PING_MBULK,60606.06,66458.43,-5852.37</td></tr>
+             <tr><td>SET,68686.04,71397.98,-2711.94</td></tr>
+             <tr><td>GET,63572.79,65694.39,-2121.6</td></tr>
+             <tr><td>INCR,68254.73,68917.98,-663.25</td></tr>
+             <tr><td>LPUSH,67764.45,72484.78,-4720.33</td></tr>
+             <tr><td>RPUSH,69788.54,69041.70,746.84</td></tr>
+             <tr><td>LPOP,69309.67,70751.38,-1441.71</td></tr>
+             <tr><td>RPOP,69744.73,71250.45,-1505.72</td></tr>
+             <tr><td>SADD,67517.38,67604.11,-86.73</td></tr>
+             <tr><td>HSET,67535.62,68068.88,-533.26</td></tr>
+             <tr><td>SPOP,65586.67,66321.80,-735.13</td></tr>
+             <tr><td>ZADD,63987.71,69720.42,-5732.71</td></tr>
+             <tr><td>ZPOPMIN,65819.79,67340.06,-1520.27</td></tr>
+             <tr><td>LPUSH (needed to benchmark LRANGE),71464.30,67732.32,3731.98</td></tr>
+             <tr><td>LRANGE_100 (first 100 elements),33767.81,33367.81,400</td></tr>
+             <tr><td>LRANGE_300 (first 300 elements),15632.57,15778.35,-145.78</td></tr>
+             <tr><td>LRANGE_500 (first 500 elements),8847.52,9034.97,-187.45</td></tr>
+             <tr><td>LRANGE_600 (first 600 elements),7516.99,7597.92,-80.93</td></tr>
+             <tr><td>MSET (10 keys),58424.87,61394.89,-2970.02</td></tr>" >> $GITHUB_STEP_SUMMARY
+       
 
 
     
