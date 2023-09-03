@@ -19,6 +19,8 @@ jobs:
        echo ${{vars.TESTENV}}
        echo test env
     - run: npm install @actions/core
+    - run: |
+       const core = require('@actions/core');
 
 
     
