@@ -19,7 +19,29 @@ jobs:
        echo ${{vars.TESTENV}}
        echo test env
     - run: |
-       echo "<tr><td>PING_INLINE,61716.97,64016.39,-2299.42</td></tr>" >> $GITHUB_STEP_SUMMARY
+       echo "<table>
+             <tr><td>test<td style="border: 1px solid black; padding: 8px;">rps<td style="border: 1px solid black; padding: 8px;">rps<td style="border: 1px solid black; padding: 8px;">0</td></tr>
+             <tr><td>PING_INLINE<td style="border: 1px solid black; padding: 8px;">61716.97<td style="border: 1px solid black; padding: 8px;">64016.39<td style="border: 1px solid black; padding: 8px;">-2299.42</td></tr>
+             <tr><td>PING_MBULK<td style="border: 1px solid black; padding: 8px;">60606.06<td style="border: 1px solid black; padding: 8px;">66458.43<td style="border: 1px solid black; padding: 8px;">-5852.37</td></tr>
+             <tr><td>SET<td style="border: 1px solid black; padding: 8px;">68686.04<td style="border: 1px solid black; padding: 8px;">71397.98<td style="border: 1px solid black; padding: 8px;">-2711.94</td></tr>
+             <tr><td>GET<td style="border: 1px solid black; padding: 8px;">63572.79<td style="border: 1px solid black; padding: 8px;">65694.39<td style="border: 1px solid black; padding: 8px;">-2121.6</td></tr>
+             <tr><td>INCR<td style="border: 1px solid black; padding: 8px;">68254.73<td style="border: 1px solid black; padding: 8px;">68917.98<td style="border: 1px solid black; padding: 8px;">-663.25</td></tr>
+             <tr><td>LPUSH<td style="border: 1px solid black; padding: 8px;">67764.45<td style="border: 1px solid black; padding: 8px;">72484.78<td style="border: 1px solid black; padding: 8px;">-4720.33</td></tr>
+             <tr><td>RPUSH<td style="border: 1px solid black; padding: 8px;">69788.54<td style="border: 1px solid black; padding: 8px;">69041.70<td style="border: 1px solid black; padding: 8px;">746.84</td></tr>
+             <tr><td>LPOP<td style="border: 1px solid black; padding: 8px;">69309.67<td style="border: 1px solid black; padding: 8px;">70751.38<td style="border: 1px solid black; padding: 8px;">-1441.71</td></tr>
+             <tr><td>RPOP<td style="border: 1px solid black; padding: 8px;">69744.73<td style="border: 1px solid black; padding: 8px;">71250.45<td style="border: 1px solid black; padding: 8px;">-1505.72</td></tr>
+             <tr><td>SADD<td style="border: 1px solid black; padding: 8px;">67517.38<td style="border: 1px solid black; padding: 8px;">67604.11<td style="border: 1px solid black; padding: 8px;">-86.73</td></tr>
+             <tr><td>HSET<td style="border: 1px solid black; padding: 8px;">67535.62<td style="border: 1px solid black; padding: 8px;">68068.88<td style="border: 1px solid black; padding: 8px;">-533.26</td></tr>
+             <tr><td>SPOP<td style="border: 1px solid black; padding: 8px;">65586.67<td style="border: 1px solid black; padding: 8px;">66321.80<td style="border: 1px solid black; padding: 8px;">-735.13</td></tr>
+             <tr><td>ZADD<td style="border: 1px solid black; padding: 8px;">63987.71<td style="border: 1px solid black; padding: 8px;">69720.42<td style="border: 1px solid black; padding: 8px;">-5732.71</td></tr>
+             <tr><td>ZPOPMIN<td style="border: 1px solid black; padding: 8px;">65819.79<td style="border: 1px solid black; padding: 8px;">67340.06<td style="border: 1px solid black; padding: 8px;">-1520.27</td></tr>
+             <tr><td>LPUSH (needed to benchmark LRANGE)<td style="border: 1px solid black; padding: 8px;">71464.30<td style="border: 1px solid black; padding: 8px;">67732.32<td style="border: 1px solid black; padding: 8px;">3731.98</td></tr>
+             <tr><td>LRANGE_100 (first 100 elements)<td style="border: 1px solid black; padding: 8px;">33767.81<td style="border: 1px solid black; padding: 8px;">33367.81<td style="border: 1px solid black; padding: 8px;">400</td></tr>
+             <tr><td>LRANGE_300 (first 300 elements)<td style="border: 1px solid black; padding: 8px;">15632.57<td style="border: 1px solid black; padding: 8px;">15778.35<td style="border: 1px solid black; padding: 8px;">-145.78</td></tr>
+             <tr><td>LRANGE_500 (first 500 elements)<td style="border: 1px solid black; padding: 8px;">8847.52<td style="border: 1px solid black; padding: 8px;">9034.97<td style="border: 1px solid black; padding: 8px;">-187.45</td></tr>
+             <tr><td>LRANGE_600 (first 600 elements)<td style="border: 1px solid black; padding: 8px;">7516.99<td style="border: 1px solid black; padding: 8px;">7597.92<td style="border: 1px solid black; padding: 8px;">-80.93</td></tr>
+             <tr><td>MSET (10 keys)<td style="border: 1px solid black; padding: 8px;">58424.87<td style="border: 1px solid black; padding: 8px;">61394.89<td style="border: 1px solid black; padding: 8px;">-2970.02</td></tr>
+             </table>" >> $GITHUB_STEP_SUMMARY
        
 
 
