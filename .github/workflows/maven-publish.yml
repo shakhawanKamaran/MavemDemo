@@ -21,7 +21,7 @@ jobs:
 
     - name: generate summary
       run: |
-       cat /ets/os-release>> $GITHUB_STEP_SUMMARY
+       cat /etc/os-release >> $GITHUB_STEP_SUMMARY
       
 
 
