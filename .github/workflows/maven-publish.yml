@@ -21,7 +21,27 @@ jobs:
 
     - name: generate summary
       run: |
-       echo "Test" >> $GITHUB_STEP_SUMMARY
+       echo "test	rps
+       PING_INLINE	57302.32
+       PING_MBULK	57940.45
+       SET	51637.42
+       GET	57016.12
+       INCR	52654.02
+       LPUSH	49166.38
+       RPUSH	49753.22
+       LPOP	49370.77
+       RPOP	47190.96
+       SADD	50100.7
+       HSET	47791.78
+       SPOP	51735.2
+       ZADD	49836.54
+       ZPOPMIN	50734.64
+       LPUSH (needed to benchmark LRANGE)	46944.83
+       LRANGE_100 (first 100 elements)	29827.95
+       LRANGE_300 (first 300 elements)	15821.53
+       LRANGE_500 (first 500 elements)	9524.76
+       LRANGE_600 (first 600 elements)	8309.4
+       MSET (10 keys)	37899.6" >> $GITHUB_STEP_SUMMARY
       
 
 
