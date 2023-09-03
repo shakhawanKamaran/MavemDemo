@@ -19,5 +19,11 @@ jobs:
        echo ${{vars.TESTENV}}
        echo test env
 
+    - name: generate summary
+      run: |
+       echo "Test" >> $GITHUB_STEP_SUMMARY
+      
+
+
     
 
