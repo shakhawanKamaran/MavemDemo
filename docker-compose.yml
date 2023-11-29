@@ -1,0 +1,10 @@
+version: '3'
+services:
+    Web-server:
+        image: 'nginx:latest'
+        ports:
+        - 8081:80
+    redis:
+        image: 'redis:latest'
+        ports:
+        - 6380:6379
